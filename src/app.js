@@ -50,6 +50,7 @@ export default {
   install(Vue) {
     Object.defineProperty(Vue.prototype, '$inertia', { get: () => Inertia })
     Object.defineProperty(Vue.prototype, '$page', { get: () => app.props })
+    Object.defineProperty(Vue.prototype, '$initialPage', { get: () => app.initialPage.props })
     Vue.mixin(Remember)
     Vue.component('InertiaLink', Link)
   },
